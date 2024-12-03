@@ -1,0 +1,51 @@
+.sidebar {
+  width: 200px; /* Wider width for better usability */
+  height: 100vh; /* Full height to match the viewport */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  //box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between navigation items */
+}
+
+.nav-link-side {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Spacing between icon and text */
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+
+  .icon {
+    font-size: 24px; /* Larger icon size for better visibility */
+  }
+
+  .icons {
+    font-size: 28px;
+  }
+}
+
+.nav-link-side:hover {
+  background-color: #e0e0e0;
+  color: #4384df; /* Match your primary color */
+}
+
+.active-link {
+  background-color: #4384df;
+  color: #fff;
+}
+
+.nav-link-side .link-text {
+  flex-grow: 1;
+}

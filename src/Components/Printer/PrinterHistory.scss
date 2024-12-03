@@ -1,0 +1,67 @@
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+.history-title {
+  margin-top: 50px;
+}
+
+  
+    thead {
+      background-color: #4caf50;
+      color: white;
+  
+      th {
+        padding: 12px;
+        text-align: left;
+        font-size: 16px;
+      }
+    }
+  
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #f1f1f1;
+        }
+        &:hover {
+          background-color: #e6f7ff;
+        }
+  
+        td {
+          padding: 12px;
+          font-size: 14px;
+          color: #333;
+        }
+  
+        .status {
+          font-weight: bold;
+          text-align: center;
+          padding: 8px;
+          border-radius: 4px;
+  
+          &.waiting {
+            background-color: #e6f4ff;
+            color: #1e88e5;
+          }
+          &.rejected {
+            background-color: #ffe6e6;
+            color: #e53935;
+          }
+          &.completed {
+            background-color: #e8f5e9;
+            color: #43a047;
+          }
+          &.unknown {
+            background-color: #eceff1;
+            color: #757575;
+          }
+        }
+      }
+    }
+  }
+  

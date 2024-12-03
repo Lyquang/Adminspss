@@ -1,0 +1,104 @@
+.request-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-height: 90vh; /* Set maximum height to viewport height */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.request-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.request-box {
+  background-color: #f0f8ff; /* Light blue background */
+  border: 1px solid #ddd; /* Light border */
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02); /* Slight hover effect */
+  }
+}
+
+.request-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.request-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1; /* Take available space */
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+
+  button {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+
+    &.accept-btn {
+      background-color: green;
+      color: white;
+
+      &:hover {
+        background-color: darkgreen;
+      }
+    }
+
+    &.reject-btn {
+      background-color: red;
+      color: white;
+
+      &:hover {
+        background-color: darkred;
+      }
+    }
+  }
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.orange-btn {
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.orange-btn:hover {
+  background-color: rgb(130, 138, 14);
+}
+
+.status.downloaded {
+  color: green;
+  font-weight: bold;
+}
+

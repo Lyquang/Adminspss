@@ -1,0 +1,26 @@
+/* User.css */
+.user-info {
+    background-color: #f9f9f9; /* Màu nền sáng */
+    border: 1px solid #ddd; /* Đường viền nhẹ */
+    border-radius: 8px; /* Bo góc */
+    padding: 20px; /* Khoảng cách bên trong */
+    max-width: 400px; /* Chiều rộng tối đa */
+    margin: 20px auto; /* Căn giữa */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    font-family: Arial, sans-serif; /* Font chữ */
+    color: black;
+  }
+  
+  .user-details {
+    font-size: 16px; /* Kích thước chữ */
+    line-height: 1.5; /* Khoảng cách giữa các dòng */
+  }
+  
+  .user-details p {
+    margin: 10px 0; /* Khoảng cách giữa các đoạn */
+  }
+  
+  h2 {
+    color: #333; /* Màu chữ cho tiêu đề */
+    margin-bottom: 15px; /* Khoảng cách dưới tiêu đề */
+  }

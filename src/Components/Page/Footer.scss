@@ -1,0 +1,76 @@
+.footer {
+  margin-top: 5px;
+  position: relative;
+  padding: 40px 20px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  text-align: center;
+
+  .contact-info, 
+  .quick-links, 
+  .brand-info {
+    flex: 1;
+    min-width: 200px; /* Ensure responsiveness */
+  }
+
+  .contact-info {
+    font-size: 14px;
+
+    div {
+      margin-bottom: 8px;
+    }
+
+    div:first-child {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+  .quick-links {
+    font-size: 14px;
+
+    div {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+  }
+
+  .brand-info {
+    font-size: 14px;
+    
+    div {
+      margin-bottom: 8px;
+    }
+
+    div:first-child {
+      font-weight: bold;
+    }
+
+    .logo {
+      margin: 0 auto 10px;
+      max-width: 80px;
+      display: block;
+    }
+  }
+
+  /* Add a subtle border for visual separation */
+  .divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #d6ecf5;
+    z-index: -1;
+  }
+}

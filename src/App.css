@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* -------------------------------
+Global Variables and Fonts
+------------------------------- */
+:root {
+  scroll-behavior: smooth;
+  --primary: #4384DF; /* Primary theme color */
+  --second: #D6ECF5; /* Secondary color */
+  --bgColor: var(--white-100, #FFF); /* Background color */
+  --textColor: #1C1C1C; /* Default text color */
+  --footerBg: #112D4E; /* Footer background color */
+  --footerText: #ffffff; /* Footer text color */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bgColor);
+  color: var(--textColor);
+}
+
+/* -------------------------------
+Typography
+------------------------------- */
+a {
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+a:hover {
+  color: var(--second);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+}
+
+/* -------------------------------
+Layout
+------------------------------- */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-top: 70px;
+  margin-left: 210px; /* Adjust based on sidebar width */
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #EBF7FF;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* -------------------------------
+Header
+------------------------------- */
+.header {
+  background-color: #ffffff;
+  color: #4384DF;
+  padding: 15px 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header a {
+  color: #4384DF;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------
+Sidebar
+------------------------------- */
+.sidebar {
+  background-color: #ffffff;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: absolute; 
+}
+
+.sidebar a {
+  color: var(--textColor);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.sidebar a:hover {
+  background-color: #3F72AF;
+  color: #ffffff;
+}
+
+.sidebar .icon {
+  margin-right: 10px;
+}
+
+/* -------------------------------
+Footer
+------------------------------- */
+.footer {
+  background-color: var(--footerBg);
+  color: var(--footerText);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 15vh; /* 15% of the full page height */
+  max-height: 150px; /* Optional: cap the height for larger screens */
+  flex-wrap: wrap; /* Ensures content adjusts on smaller screens */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer .contact-info,
+.footer .quick-links,
+.footer .brand-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  padding: 0 10px;
+}
+
+.footer .contact-info {
+  align-items: flex-start;
+}
+
+.footer .quick-links {
+  align-items: center;
+}
+
+.footer .brand-info {
+  align-items: flex-end;
+}
+
+.footer a {
+  color: var(--second);
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+
+.footer img {
+  max-height: 50px; /* Adjust to fit within the reduced footer height */
+  margin-bottom: 10px;
+}
+
+.footer .contact-info div,
+.footer .quick-links div,
+.footer .brand-info div {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .footer .contact-info,
+  .footer .quick-links,
+  .footer .brand-info {
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+/* -------------------------------
+Dropdown Menu
+------------------------------- */
+.dropdown-menu {
+  border-radius: 4px;
+  padding: 10px 0;
+  animation: dropdown-animate 0.2s both;
+  border: 0;
+  box-shadow: 0 5px 30px rgba(82, 63, 105, 0.2);
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 10px 15px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f6f9ff;
+}
+
+@keyframes dropdown-animate {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------
+Media Queries
+------------------------------- */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
